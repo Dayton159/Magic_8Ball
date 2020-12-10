@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i96-LF-2wG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="GG2-sK-dMn">
+            <objects>
+                <viewController id="i96-LF-2wG" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QhW-7b-NdD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcg-AW-TdE">
+                                <rect key="frame" x="34" y="138" width="346" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="hLd-R6-YzI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="36"/>
+                                <color key="textColor" red="1" green="0.87843137250000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="y3s-lj-bXi">
+                                <rect key="frame" x="75" y="266" width="264" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="cOT-cZ-Ll6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-1Z-dfC">
+                                <rect key="frame" x="176" y="615" width="63" height="39"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.56862745100000001" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="qUN-mM-QNr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
+                                <state key="normal" title="Ask">
+                                    <color key="titleColor" red="1" green="0.91372549020000005" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="askBtn:" destination="i96-LF-2wG" eventType="touchUpInside" id="fFJ-pX-eKv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GXa-2V-CBn"/>
+                        <color key="backgroundColor" red="0.0" green="0.56470588239999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GXa-2V-CBn" firstAttribute="trailing" secondItem="Xcg-AW-TdE" secondAttribute="trailing" constant="34" id="7Y7-fG-oay"/>
+                            <constraint firstItem="GXa-2V-CBn" firstAttribute="trailing" secondItem="y3s-lj-bXi" secondAttribute="trailing" constant="75" id="87T-m0-TKh"/>
+                            <constraint firstItem="Xcg-AW-TdE" firstAttribute="leading" secondItem="GXa-2V-CBn" secondAttribute="leading" constant="34" id="HWy-sX-hou"/>
+                            <constraint firstItem="GXa-2V-CBn" firstAttribute="bottom" secondItem="mf9-1Z-dfC" secondAttribute="bottom" constant="208" id="KPP-va-OE8"/>
+                            <constraint firstItem="y3s-lj-bXi" firstAttribute="leading" secondItem="GXa-2V-CBn" secondAttribute="leading" constant="75" id="V3X-5n-V3K"/>
+                            <constraint firstItem="Xcg-AW-TdE" firstAttribute="top" secondItem="GXa-2V-CBn" secondAttribute="top" constant="94" id="fy7-KM-ZZ7"/>
+                            <constraint firstItem="mf9-1Z-dfC" firstAttribute="leading" secondItem="GXa-2V-CBn" secondAttribute="leading" constant="176" id="hTB-eA-M65"/>
+                            <constraint firstItem="y3s-lj-bXi" firstAttribute="top" secondItem="GXa-2V-CBn" secondAttribute="top" constant="222" id="lEW-ab-g5F"/>
+                            <constraint firstItem="GXa-2V-CBn" firstAttribute="trailing" secondItem="mf9-1Z-dfC" secondAttribute="trailing" constant="175" id="q5A-XX-E9K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ballPic" destination="y3s-lj-bXi" id="BdI-Rt-FOM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5rq-QE-S7k" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball1" width="305" height="273.5"/>
+    </resources>
+</document>
